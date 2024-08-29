@@ -1,1 +1,33 @@
-{"flutter":{"platforms":{"android":{"default":{"projectId":"corazoncitomexicano-test1","appId":"1:160531026335:android:7899953008d60f34eeedaa","fileOutput":"android/app/google-services.json"}},"dart":{"lib/firebase_options.dart":{"projectId":"corazoncitomexicano-test1","configurations":{"android":"1:160531026335:android:7899953008d60f34eeedaa","ios":"1:160531026335:ios:7233edfb53996428eeedaa","macos":"1:160531026335:ios:7233edfb53996428eeedaa","web":"1:160531026335:web:79c0d8898dd26954eeedaa","windows":"1:160531026335:web:47fd3b7bfe39566beeedaa"}}}}}}
+{
+  "flutter": {
+    "platforms": {
+      "android": {
+        "default": {
+          "projectId": "corazoncitomexicano-test1",
+          "appId": "1:160531026335:android:7899953008d60f34eeedaa",
+          "fileOutput": "android/app/google-services.json"
+        }
+      },
+      "dart": {
+        "lib/firebase_options.dart": {
+          "projectId": "corazoncitomexicano-test1",
+          "configurations": {
+            "android": "1:160531026335:android:7899953008d60f34eeedaa",
+            "ios": "1:160531026335:ios:7233edfb53996428eeedaa",
+            "macos": "1:160531026335:ios:7233edfb53996428eeedaa",
+            "web": "1:160531026335:web:79c0d8898dd26954eeedaa",
+            "windows": "1:160531026335:web:47fd3b7bfe39566beeedaa"
+          }
+        }
+      }
+    }
+  },
+  "hosting": {
+    "public": "build/web",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ]
+  }
+}

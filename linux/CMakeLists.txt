@@ -7,7 +7,11 @@ project(runner LANGUAGES CXX)
 set(BINARY_NAME "flutter_application_2")
 # The unique GTK application identifier for this application. See:
 # https://wiki.gnome.org/HowDoI/ChooseApplicationID
+<<<<<<< HEAD
 set(APPLICATION_ID "com.arthisTech.com")
+=======
+set(APPLICATION_ID "com.arthisTech.app")
+>>>>>>> f14240c189335d0dd3fd5b1d9bd69dbd919072ba
 
 # Explicitly opt in to modern CMake behaviors to avoid warnings with recent
 # versions of CMake.
