@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "160531026335",
+    "project_id": "corazoncitomexicano-test1",
+    "storage_bucket": "corazoncitomexicano-test1.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:160531026335:android:7899953008d60f34eeedaa",
+        "android_client_info": {
+          "package_name": "com.arthisTech.app"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAIMgw1MEkRSldQnvk02OKZ35MaSGnmNXM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
