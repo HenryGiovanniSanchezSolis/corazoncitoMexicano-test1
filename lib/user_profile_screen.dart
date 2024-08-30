@@ -10,7 +10,7 @@ class UserProfileScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Bienvenid@ a Corazoncito Mexicano'),
+        title: const Text('Perfil de Usuario'),
       ),
       body: Padding(
         padding: const EdgeInsets.all(16.0),
@@ -18,8 +18,8 @@ class UserProfileScreen extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Text('Correo electrónico: ${user.email}'),
-            Text('UID: ${user.displayName}'),
-            // Agrega más información que desees mostrar
+            Text('UID: ${user.uid}'),
+            // Aquí puedes agregar más información del usuario si lo deseas.
           ],
         ),
       ),

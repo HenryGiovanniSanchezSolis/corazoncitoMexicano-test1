@@ -26,7 +26,7 @@ class HomeScreen extends StatelessWidget {
               ElevatedButton(
                 onPressed: () {
                   if (_formKey.currentState!.validate()) {
-                    Navigator.pushNamed(context, '/home');
+                    Navigator.pushNamed(context, '/login');
                   }
                 },
                 child: const Text('Iniciar sesión'),

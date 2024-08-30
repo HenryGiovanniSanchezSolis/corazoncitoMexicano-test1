@@ -69,8 +69,20 @@ class LoginScreen extends StatelessWidget {
                           .signInWithEmailAndPassword(
                               email: _emailController.text,
                               password: _passwordController.text);
+                      //User? user = FirebaseAuth.instance.currentUser;
                       User? user = FirebaseAuth.instance.currentUser;
                       if (user != null) {
+                        logger.d(user);
+                         ScaffoldMessenger.of(context).showSnackBar(
+                          const SnackBar(content: Text('Inicio de sesión correcta')));
+                         
+                        Navigator.pushNamed(
+                          context,
+                          '/profile',
+                          arguments: user,
+                        );
+                      }
+                      /*if (user != null) {
                          logger.d(user);
                          ScaffoldMessenger.of(context).showSnackBar(
                           const SnackBar(content: Text('Inicio de sesión correcta')),
@@ -81,7 +93,7 @@ class LoginScreen extends StatelessWidget {
                             builder: (context) => UserProfileScreen(user: user)
                           ),
                         );
-                      }
+                      }*/
                       //Navigator.pushNamed(context, '/home');
                     } on FirebaseAuthException catch (e) {
                       logger.d(e);
