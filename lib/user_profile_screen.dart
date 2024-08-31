@@ -16,12 +16,12 @@ class UserProfileScreen extends StatelessWidget {
           return Scaffold(
             appBar: AppBar(
               title: const Text('Perfil de Usuario'),
-              leading: IconButton(
-                icon: const Icon(Icons.arrow_back),
-                onPressed: () {
-                  Navigator.pushNamedAndRemoveUntil(context, '/', (route) => false);
-                },
-              ),
+               leading: IconButton(
+                 icon: const Icon(Icons.arrow_back),
+                 onPressed: () {
+                   Navigator.pushNamedAndRemoveUntil(context, '/', (route) => false);
+                 },
+               ),
             ),
             body: const Center(
               child: CircularProgressIndicator(),
@@ -33,12 +33,12 @@ class UserProfileScreen extends StatelessWidget {
           return Scaffold(
             appBar: AppBar(
               title: const Text('Perfil de Usuario'),
-              leading: IconButton(
-                icon: const Icon(Icons.arrow_back),
-                onPressed: () {
-                  Navigator.pushNamedAndRemoveUntil(context, '/', (route) => false);
-                },
-              ),
+               leading: IconButton(
+                 icon: const Icon(Icons.arrow_back),
+                 onPressed: () {
+                   Navigator.pushNamedAndRemoveUntil(context, '/', (route) => false);
+                 },
+               ),
             ),
             body: Center(
               child: Text('Error: ${snapshot.error}'),
@@ -50,12 +50,12 @@ class UserProfileScreen extends StatelessWidget {
           return Scaffold(
             appBar: AppBar(
               title: const Text('Perfil de Usuario'),
-              leading: IconButton(
-                icon: const Icon(Icons.arrow_back),
-                onPressed: () {
-                  Navigator.pushNamedAndRemoveUntil(context, '/', (route) => false);
-                },
-              ),
+               leading: IconButton(
+                 icon: const Icon(Icons.arrow_back),
+                 onPressed: () {
+                   Navigator.pushNamedAndRemoveUntil(context, '/', (route) => false);
+                 },
+               ),
             ),
             body: const Center(
               child: Text('No se encontró la información del usuario.'),
@@ -68,12 +68,12 @@ class UserProfileScreen extends StatelessWidget {
         return Scaffold(
           appBar: AppBar(
             title: const Text('Perfil de Usuario'),
-            leading: IconButton(
-              icon: const Icon(Icons.arrow_back),
-              onPressed: () {
-                Navigator.pushNamedAndRemoveUntil(context, '/', (route) => false);
-              },
-            ),
+             leading: IconButton(
+               icon: const Icon(Icons.arrow_back),
+               onPressed: () {
+                 Navigator.pushNamedAndRemoveUntil(context, '/', (route) => false);
+               },
+             ),
           ),
           body: Padding(
             padding: const EdgeInsets.all(16.0),

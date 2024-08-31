@@ -45,7 +45,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
         });
 
         // Redirige a otra pantalla o muestra un mensaje de éxito
-        Navigator.pop(context); // Vuelve a la pantalla anterior (HomeScreen)
+        //Navigator.pop(context); // Vuelve a la pantalla anterior (HomeScreen)
       } on FirebaseAuthException catch (e) {
         // Maneja los errores de Firebase Authentication aquí
         String message;
