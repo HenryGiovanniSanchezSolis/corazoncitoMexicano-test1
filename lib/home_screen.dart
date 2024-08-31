@@ -4,6 +4,8 @@ class HomeScreen extends StatelessWidget {
   
   final _formKey = GlobalKey<FormState>();
 
+  HomeScreen({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -30,6 +32,14 @@ class HomeScreen extends StatelessWidget {
                   }
                 },
                 child: const Text('Iniciar sesión'),
+              ),
+              ElevatedButton(
+                onPressed: () {
+                  if (_formKey.currentState!.validate()) {
+                    Navigator.pushNamed(context, '/registerUser');
+                  }
+                },
+                child: const Text('Registrarse'),
               ),
             ],
           ),
