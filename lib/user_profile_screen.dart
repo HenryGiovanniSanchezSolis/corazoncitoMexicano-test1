@@ -1,6 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:logger/logger.dart';
+
+
+var logger = Logger();
 
 class UserProfileScreen extends StatelessWidget {
   final User user;
@@ -63,7 +67,10 @@ class UserProfileScreen extends StatelessWidget {
           );
         }
 
-        var userData = snapshot.data!.data() as Map<String, dynamic>;
+         var userData = snapshot.data!.data() as Map<String, dynamic>;
+        logger.i(userData);
+
+        var userRole = userData['userRole'];
 
         return Scaffold(
           appBar: AppBar(
@@ -75,7 +82,11 @@ class UserProfileScreen extends StatelessWidget {
                },
              ),
           ),
-          body: Padding(
+          body: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+
+            Padding(
             padding: const EdgeInsets.all(16.0),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
@@ -86,8 +97,82 @@ class UserProfileScreen extends StatelessWidget {
               ],
             ),
           ),
+
+              Center(
+              child:
+              userRole == 'admin' 
+                ? AdminProfileWidget()  // Muestra un widget si es admin
+                : UserProfileWidget(),  // Muestra otro widget si es usuario normal
+            ),
+
+            ],
+
+          ) 
+            /*Center(
+              child:
+              userRole == 'admin' 
+                ? AdminProfileWidget()  // Muestra un widget si es admin
+                : UserProfileWidget(),  // Muestra otro widget si es usuario normal
+            ),*/
+          
+          /*body: Padding(
+            padding: const EdgeInsets.all(16.0),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: <Widget>[
+                Text('Nombre Completo: ${userData['fullName']}'),
+                Text('Correo Electrónico: ${userData['email']}'),
+                Text('Número de Teléfono: ${userData['phone']}'),
+              ],
+            ),
+          ),*/
         );
       },
+    );
+  }
+}
+
+// Definimos widgets condicionales según el rol
+class AdminProfileWidget extends StatelessWidget {
+
+
+  @override
+  Widget build(BuildContext context) {
+    return Column(
+      mainAxisAlignment: MainAxisAlignment.center,
+      children: <Widget>[
+
+        const Text('¡Bienvenido, Administrador!'),
+        ElevatedButton(
+          onPressed: () {
+            // Funcionalidad especial para el admin
+          },
+          child:
+          
+           const Text('Agregar tareas'),
+        ),
+        
+        
+      ],
+    );
+  }
+}
+
+class UserProfileWidget extends StatelessWidget {
+
+  @override
+  Widget build(BuildContext context) {
+    return Column(
+      mainAxisAlignment: MainAxisAlignment.center,
+      children: [
+        const Text('¡Bienvenido Alumn@!'),
+        ElevatedButton(
+          onPressed: () {
+            // Funcionalidad para usuario estándar
+          },
+          child: const Text('Buscar tareas'),
+        ),
+      ],
     );
   }
 }
